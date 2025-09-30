@@ -1,17 +1,17 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import app from './app.js';
-// Handle uncaught exceptions
+
 process.on('uncaughtException', (err) => {
   console.log('UNCAUGHT EXCEPTION! 💥 Shutting down...');
   console.log(err.name, err.message);
   process.exit(1);
 });
 
-// Load config
+
 dotenv.config();
 
-// Database connection
+
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
@@ -35,7 +35,7 @@ const server = app.listen(PORT, () => {
 });
 
 process.on('unhandledRejection', (err, promise) => {
-  console.log('UNHANDLED REJECTION! 💥 Shutting down...');
+  console.log('UNHANDLED REJECTION! Shutting down...');
   console.log(err.name, err.message);
   server.close(() => {
     process.exit(1);

@@ -1,7 +1,7 @@
 {
   "name": "warehouse",
   "version": "1.0.0",
-  "description": "Warehouse product tracking API",
+  "description": "Warehouse product tracking API for Verto",
   "author": {
     "name": "Pavan Patil",
     "email": "thepavanpatil.official@gmail.com"},

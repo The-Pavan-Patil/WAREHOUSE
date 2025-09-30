@@ -63,7 +63,7 @@ const updateProduct = async (req, res, next) => {
     const { id } = req.params;
     const updateData = req.body;
     
-    // Validate stock quantity if provided
+    
     if (updateData.stock_quantity !== undefined && updateData.stock_quantity < 0) {
       return res.status(400).json({
         success: false,

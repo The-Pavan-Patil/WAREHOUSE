@@ -13,7 +13,7 @@ import {
 
 router.post('/', createProduct);
 router.get('/', getAllProducts);
-router.get('/low-stock', getLowStockProducts); // Must be before /:id route
+router.get('/low-stock', getLowStockProducts); 
 router.get('/:id', getProductById);
 router.put('/:id', updateProduct);
 router.delete('/:id', deleteProduct);
